@@ -65,6 +65,18 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4.  Push to the branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
+## 📝 Privacy Policy
+
+This tool only downloads SVG files.
+We do not collect any personal data.
+No tracking, analytics, or cookies.
+All downloads go directly to your device.
+We do not store or share your files.
+You are responsible for any content you download or upload.
+If you run this on a third party server, the server admin may have access.
+Use it as needed.
+
 ## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
