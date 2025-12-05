@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSVG Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="header-top">
+                    <div class="header-left">
+                        <div class="logo-section">
+                            <img src="../../assets/icon48.png" alt="Logo" width="28" height="28">
+                            <h1>OpenSVG</h1>
+                        </div>
+                        <div class="page-info" id="pageInfo">
+                            <!-- Title and URL will be injected here -->
+                            <div class="page-title skeleton"></div>
+                            <div class="page-url skeleton"></div>
+                        </div>
+                    </div>
+
+                    <div class="header-actions">
+                        <a href="https://buymeacoffee.com/wahibirawan" target="_blank" class="btn-coffee">
+                            Buy me a coffee
+                        </a>
+                    </div>
+                </div>
+                <!-- header-bottom / segmented-control ... -->
+                <div class="header-bottom">
+                    <div class="segmented-control">
+                        <button class="segment-btn active" data-filter="all">All</button>
+                        <button class="segment-btn" data-filter="inline">Inline</button>
+                        <button class="segment-btn" data-filter="file">Files</button>
+                        <div class="segment-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div class="toolbar-info">
+                <span id="totalCount">0 SVGs</span>
+                <div class="toolbar-actions">
+                    <label class="select-all-btn">
+                        <input type="checkbox" id="selectAllCheckbox">
+                        <span>Select All</span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="svgGrid" class="svg-grid">
+                <!-- SVG Cards will be injected here -->
+            </div>
+
+            <div class="empty-state" style="display: none;">
+                <div class="empty-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <h3>No SVGs Found</h3>
+                <p>Try scrolling down the page or visiting a different site.</p>
+            </div>
+        </main>
+
+        <!-- Floating Action Bar (Hidden by default) -->
+        <div id="floatingBar" class="floating-bar">
+            <div class="floating-content">
+                <span id="selectionCount">0 Selected</span>
+                <div class="floating-actions">
+                    <button id="clearSelectionBtn" class="btn-text">Clear</button>
+                    <button id="downloadSelectedBtn" class="btn-primary-ios">Download Selected</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../shared/jszip.min.js"></script>
+    <script src="../shared/svg-utils.js" type="module"></script>
+    <script src="dashboard.js" type="module"></script>
+</body>
+
+</html>
